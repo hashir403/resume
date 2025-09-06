@@ -1,0 +1,345 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashir Ashfaq</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<style>
+ 
+ 
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    background: rgba(0, 171, 240, 0.1); /* main color with transparency */
+    color: var(--text-color);
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.skill-item i {
+    font-size: 24px;
+    color: var(--main-color); /* main color for icons */
+}
+
+.skill-item:hover {
+    transform: scale(1.1);
+    background: rgba(0, 171, 240, 0.2); /* slightly darker on hover */
+    cursor: pointer;
+}
+
+
+
+</style>
+
+<body>
+
+    <!-- header design -->
+    <header class="header">
+        <a href="#" class="logo">Hashir Ashfaq<span class="animate" style="--i:1;"></span></a>
+
+        <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="{% url 'project' %}" class="active">MY Project</a>
+
+            <span class="active-nav"></span>
+            <span class="animate" style="--i:2;"></span>
+        </nav>
+    </header>
+
+    <!-- home section design -->
+    <section class="home show-animate" id="home">
+        <div class="home-content">
+            <br>
+        <h1>Hi, I'm <span>Hashir Ashfaq</span><span class="animate" style="--i:2;"></span></h1>
+        <div class="text-animate">
+            <h3>Full-Stack Web Developer & Python</h3>
+            <span class="animate" style="--i:3;"></span>
+        </div>
+        <p>
+            I am a passionate and results-driven developer with hands-on experience in Python, Django, and modern front-end technologies like HTML, CSS, and JavaScript.  
+            Currently working at <strong>AI Soft</strong> in Faisalabad, I develop full-stack web applications, contribute to machine learning projects, and create efficient, scalable solutions.  
+            I also have experience building desktop applications using PyQt and deploying projects to platforms like GitHub and PythonAnywhere.  
+            My goal is to continuously learn, innovate, and deliver high-quality projects that solve real-world problems.  
+            <span class="animate" style="--i:4;"></span>
+        </p>
+
+            <div class="btn-box">
+                <a href="{% static 'cv/python_developer_Hashir_Ashfaq.pdf' %}" class="btn" download>Download CV</a>
+                <!-- <a href="#" class="btn">Let's Talk</a> -->
+                <span class="animate" style="--i:5;"></span>
+            </div>
+        </div>
+
+
+
+
+        <div class="home-imgHover"></div>
+        <span class="animate home-img" style="--i:7;"></span>
+    </section>
+
+    <hr class="divider">
+
+    <!-- about section design -->
+<section class="about" id="about">
+    <h2 class="heading">About <span>Me</span></h2>
+
+    <div class="about-img">
+        <img src="{% static 'images/pic.jpg' %}" alt="Hashir Ashfaq">
+        <span class="circle-spin"></span>
+    </div>
+
+    <div class="about-content">
+        <h3>I’m Hashir Ashfaq.</h3>
+        <p>
+            I am a passionate Python and Django developer with experience in both front-end and back-end development.
+            Skilled in HTML, CSS, JavaScript, and Python, I build responsive and interactive websites from scratch and
+            bring them live. Alongside web development, I have experience creating desktop applications using PyQt,
+            and I’m actively exploring Machine Learning and Data Science to expand my technical expertise.
+            <br><br>
+            Currently, I work at <strong>AI Soft</strong> in Faisalabad, contributing to web development and ML-based projects.
+            I am pursuing my <strong>BS in Information Technology</strong> and continually learning new technologies to
+            deliver modern, efficient solutions. My goal is to integrate creativity, problem-solving, and technology
+            to create meaningful digital experiences.
+        </p>
+
+        <div class="btn-box btns">
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+    <!-- education section design -->
+<section class="education" id="education">
+    <h2 class="heading">My <span>Journey</span></h2>
+
+    <div class="education-row">
+        <!-- Education Column -->
+        <div class="education-column">
+            <h3 class="title">Education</h3>
+
+            <div class="education-box">
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class='bx bxs-calendar'></i> 2022 - 2026</div>
+                        <h3>BS (Hons) Information Technology</h3>
+                        <p>Currently pursuing my Bachelor's degree at Virtual University of Pakistan, focusing on software development, web technologies, and Python-based projects. Currently in the 7th semester.</p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class='bx bxs-calendar'></i> 2020 - 2022</div>
+                        <h3>F.Sc. Pre-Medical</h3>
+                        <p>Completed F.Sc. from Aspire Group of Colleges, Toba Tek Singh.</p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class='bx bxs-calendar'></i> 2019 - 2020</div>
+                        <h3>Matriculation</h3>
+                        <p>Graduated from Al-Usman Ideal High School, building the foundation for academic excellence and discipline.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Experience Column -->
+        <div class="education-column">
+            <h3 class="title">Experience</h3>
+
+            <div class="education-box">
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class='bx bxs-calendar'></i> 2025 - Present</div>
+                        <h3>Django Web Developer & ML Enthusiast</h3>
+                        <p>Currently working at <strong>AI Soft</strong> in Faisalabad, developing full-stack web applications using Django, Python, HTML, CSS, and JavaScript. Contributing to machine learning and AI-based projects while improving real-world applications.</p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <div class="year"><i class='bx bxs-calendar'></i> 2023 - 2025</div>
+                        <h3>Freelance Web & Desktop Developer</h3>
+                        <p>Worked on multiple projects including E-commerce websites, School Management Systems, Library Management Systems, and desktop applications using PyQt. Gained experience in project deployment on platforms like PythonAnywhere and GitHub.</p>
+                    </div>
+                </div>
+
+                <div class="education-content">
+                    <div class="content">
+                        <h3>Personal Projects & Portfolio Development</h3>
+                        <p>Built and maintained various web and machine learning projects, including Cat vs Dog Classifier, Bank Loan Approval System, Brain Tumor Detection, Face Verification System, and automation bots using Python, Django, and Selenium.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- skills section design -->
+<section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="skills-row">
+        <!-- Coding Skills -->
+        <div class="skills-column">
+            <h3 class="title">Coding Skills</span></h3>
+            <div class="skills-icons">
+                <div class="skill-item"><i class='bx bxl-python'></i> Python</div>
+                <div class="skill-item"><i class='bx bxl-django'></i> Django</div>
+                <div class="skill-item"><i class='bx bx-brain'></i> Machine Learning</div>
+                <div class="skill-item"><i class='bx bxl-html5'></i> HTML</div>
+                <div class="skill-item"><i class='bx bxl-css3'></i> CSS</div>
+                <div class="skill-item"><i class='bx bxl-javascript'></i> JavaScript</div>
+            </div>
+        </div>
+
+
+            <div class="skills-divider">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+        <!-- Professional Skills -->
+        <div class="skills-column">
+            <h3 class="title">Professional Skills</h3>
+            <div class="skills-icons">
+                <div class="skill-item"><i class='bx bx-desktop'></i> Full-Stack Web Development</div>
+                <div class="skill-item"><i class='bx bx-brain'></i> Machine Learning & AI</div>
+                <div class="skill-item"><i class='bx bx-window'></i> Desktop Applications (PyQt)</div>
+                <div class="skill-item"><i class='bx bxl-github'></i> Git & GitHub</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- contact section design -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></span></h2>
+
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="input-box">
+                <div class="input-field">
+                    <input name="name" type="text" placeholder="Full Name" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input name="email" type="email" placeholder="Email" required>
+                    <span class="focus"></span>
+                </div>
+
+                
+            </div>
+            <div class="input-box">
+                <div class="input-field">
+                    <input name="number" type="number" placeholder="Mobile Number" required>
+                    <span class="focus"></span>
+                </div>
+                <div class="input-field">
+                    <input name="email_title" type="text" placeholder="Email Subject" required>
+                    <span class="focus"></span>
+                </div>
+
+            </div>
+
+            <div class="textarea-field">
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <span class="focus"></span>
+
+            </div>
+
+            <div class="btn-box btns">
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </section>
+
+
+    
+
+<!-- WhatsApp Floating Animated Icon -->
+<a href="https://wa.me/923493982652" target="_blank" class="whatsapp-icon">
+    <i class='bx bxl-whatsapp'></i>
+</a>
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+    <div class="footer-text">
+        <p>Copyright &copy; 2025 | Designed and
+            Maintenance by Hashir Ashfaq | All
+            Rights Reserved</p>
+    </div>
+
+    <div class="footer-links">
+        <a href="https://www.linkedin.com/in/hashir-ashfaq" target="_blank">
+            <i class='bx bxl-linkedin'></i>
+        </a>
+        <!-- <a href="https://www.instagram.com/your-profile" target="_blank">
+            <i class='bx bxl-instagram'></i>
+        </a> -->
+    </div>
+
+    <div class="footer-iconTop">
+        <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+    </div>
+</footer>
+
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const whatsappBtn = document.querySelector("whatsapp-icon");
+    whatsappBtn.style.transform = "translateX(-100px)";
+    
+    setTimeout(() => {
+        whatsappBtn.style.transition = "transform 0.5s ease-in-out";
+        whatsappBtn.style.transform = "translateX(0)";
+    }, 500);
+});
+
+
+    </script>
+
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+
+</html>

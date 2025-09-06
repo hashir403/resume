@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Hashir Ashfaq</title>
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header style="background-color: var(--bg-color);" class="header">
+        <a href="{% url 'home' %}" class="logo">Hashir Ashfaq<span class="animate" style="--i:1;"></span></a>
+
+        <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
+
+        <nav class="navbar">
+            <a href="{% url 'home' %}#home">Home</a>
+            <a href="{% url 'home' %}#about">About</a>
+            <a href="{% url 'home' %}#education">Education</a>
+            <a href="{% url 'home' %}#skills">Skills</a>
+            <a href="{% url 'home' %}#contact">Contact</a>
+            <a href="{% url 'project' %}" class="active">My Projects</a>
+            <span class="active-nav"></span>
+            <span class="animate" style="--i:2;"></span>
+        </nav>
+    </header>
+
+<!-- ===== Projects Section ===== -->
+<section class="projects show-animate" id="projects">
+    <h2 class="heading">My <span>Projects</span></h2>
+
+    <div class="projects-container">
+        {% for project in projects %}
+        <div class="project-box">
+            <img src="{{ project.image.url }}" alt="{{ project.title }}">
+            <div class="project-content">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.short_description }}</p>
+                <a href="{% url 'project_detail' project.pk %}" class="btn">View Project</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/923493982652" target="_blank" class="whatsapp-icon">
+        <i class='bx bxl-whatsapp'></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>© 2025 | Designed & Maintained by Hashir Ashfaq | All Rights Reserved</p>
+        </div>
+
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/hashir-ashfaq" target="_blank">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

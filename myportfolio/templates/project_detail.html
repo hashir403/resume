@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ project.title }} - Details</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<style>
+    .project-detail-img {
+    width: 100%;        
+    max-width: 600px;    
+    height: 350px;       
+    object-fit: cover;    
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    display: block;
+    margin: 0 auto 20px; 
+}
+
+</style>
+<body class="project-detail-body">
+
+<div class="project-detail-container">
+    <span class="close-btn" onclick="window.history.back();">&times;</span>
+
+    <img src="{{ project.image.url }}" alt="{{ project.title }}" class="project-detail-img">
+    <h2>{{ project.title }}</h2>
+    <p>{{ project.long_description }}</p>
+
+    {% if project.link %}
+        <a href="{{ project.link }}" target="_blank" class="btn">Visit Project</a>
+    {% endif %}
+</div>
+
+</body>
+</html>
